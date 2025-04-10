@@ -1,0 +1,78 @@
+/* 아래 10개의 properties 모두 사용 (한 개 당 5점)
+• background-color
+• text-align
+• padding
+• margin
+• border
+• font-size
+• font-family
+• color
+• width
+• height */
+
+
+body { background-color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+.container {
+    background-color: #f9f9f9;
+    display: block;
+    border: 1px solid black;
+    width: 350px;
+    height: 430px;
+    margin: 40px auto;
+    padding: 50px;
+    
+}
+.container p {
+    text-align: left;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+  }
+p { color: black;
+    font-size: 13px;
+    text-align: center;
+    
+}
+
+.btn-signup {
+    background-color: greenyellow; 
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.btn-login {
+    background-color: greenyellow; 
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-cancel {
+    background-color: rgb(245, 62, 62); 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-signup:hover {
+    background-color: rgb(130, 191, 38);
+}
+.btn-login:hover {
+    background-color: rgb(130, 191, 38);
+}
+
+.btn-cancel:hover {
+    background-color: rgb(174, 46, 46);
+}
+
