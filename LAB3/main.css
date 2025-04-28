@@ -16,7 +16,9 @@ body {
     position: absolute;
     color: black;
     width: max-content;
-    animation: headertext 2s linear;
+    animation-name: headertext;
+    animation-duration: 2s;
+    animation-timing-function: linear;
 }
   
 @keyframes headertext {
@@ -46,7 +48,7 @@ body {
     gap: 20px;
 }
   
-/* Movies Section */
+/* movies section */
 .movie-section {
     border: 1px solid gray;
     padding: 10px;
@@ -72,7 +74,7 @@ body {
   
 .movie-images {
     display: flex;
-    flex-direction: row; /* 이미지 수평 */
+    flex-direction: row;
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
