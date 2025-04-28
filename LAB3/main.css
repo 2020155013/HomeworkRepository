@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    max-width: 1020px; 
+    margin: 0 auto;
+}
+  
+.wrapper {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    height: 100px;
+}
+
+.sliding-header {
+    position: absolute;
+    color: black;
+    width: max-content;
+    animation: headertext 2s linear;
+}
+  
+@keyframes headertext {
+    0% { left: 100%; }
+    100% { left: 0; }
+}
+
+/* navigation */
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+  
+.nav-item {
+    color: black;
+    padding: 10px 20px;
+}
+
+
+
+.main-container { /* first container */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+/* Movies Section */
+.movie-section {
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+  
+.movie-card {
+    border: 1px solid gray;
+    padding: 10px;
+    width: 220px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.movie-images {
+    display: flex;
+    flex-direction: row; /* 이미지 수평 */
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+.movie-img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+  
+.movie-title {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+  
+.about-section {
+    border: 1px solid gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+  
+.about-content {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-color: gray;
+    column-rule-width: 1px;
+    text-align: justify;
+}
+@media (max-width: 800px) {
+    .about-content {
+      column-count: 1;
+    }
+}
+
+/* 3가지 case -> 네비게이션 및 메인컨텐츠 layout 변경하기 */
+@media (max-width: 480px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .movie-list {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+  
+@media (min-width: 481px) and (max-width: 800px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .movie-list {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+}
+  
+@media (min-width: 801px) {
+    .nav-container {
+      flex-direction: row;
+    }
+    .movie-list {
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+    }
+}
+.left-image img {
+    transition: transform 2s;
+}
+  
+.left-image img:hover {
+    transform: scale(1.2);
+}
+
+.right-image {
+    position: relative;
+}
+  
+.right-image img {
+    display: block;
+}
+  
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 9px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.right-image:hover .hover-text {
+    opacity: 1;
+}
