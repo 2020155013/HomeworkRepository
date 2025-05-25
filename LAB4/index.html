@@ -107,7 +107,7 @@
                 displayMoreMovies();
             }
 
-            window.addEventListener("scroll", () => {
+            window.addEventListener("scroll", () => { // infinite scrolling 
                 if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
                     displayMoreMovies();
                 }
@@ -116,26 +116,16 @@
             document.addEventListener("DOMContentLoaded", () => {
                 loadMovies();
 
-                // 정렬 라디오 클릭 시 필터 실행
+                // 정렬 radio 선택 시 정렬
                 document.querySelectorAll('input[name="sort"]').forEach(radio => {
                     radio.addEventListener("change", filterMovies);
                 });
 
-                // 엔터로 검색 실행
+                // enter key로 검색 실행
                 searchInput.addEventListener("keyup", function (event) {
                     if (event.key === "Enter") {
                         filterMovies();
                     }
-                });
-
-                // 헤더 클릭 시 초기화
-                document.getElementById("siteTitle").addEventListener("click", () => {
-                    searchInput.value = "";
-                    document.querySelectorAll('input[name="sort"]').forEach(r => r.checked = false);
-                    movies = [...allMovies];
-                    displayedCount = 0;
-                    movieList.innerHTML = "";
-                    displayMoreMovies();
                 });
             });
         </script>
