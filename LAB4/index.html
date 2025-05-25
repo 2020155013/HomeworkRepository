@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Heeyong's blog!</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <header class="wrapper">
+            <h1 id="siteTitle" class="sliding-header">Welcome to Heeyong's movie site!!</h1>
+        </header>
+
+        <nav class="nav-container">
+            <div class="nav-item"><a href="index.html">MAIN PAGE</a></div>
+            <div class="nav-item"><a href="login.html">LOGIN</a></div>
+            <div class="nav-item"><a href="signup.html">SIGN UP</a></div>
+        </nav>
+
+        <main class="main-container">
+            <section class="filter-section">
+                <div class="filter-row">
+                    <input type="text" id="searchInput" placeholder="키워드를 입력하세요" />
+                    <button onclick="filterMovies()">Filter results</button>
+                </div>
+            </section>
+
+            <section class="movie-section">
+                <h2>Movies</h2>
+                <div class="movie-content">
+                    <div class="sort-options">
+                        <strong>정렬 기준</strong><br />
+                        <br />
+                        <label><input type="radio" name="sort" value="rating-desc"> 평점 내림차순</label><br />
+                        <label><input type="radio" name="sort" value="rating-asc"> 평점 오름차순</label><br />
+                        <label><input type="radio" name="sort" value="date-desc"> 개봉 내림차순</label><br />
+                        <label><input type="radio" name="sort" value="date-asc"> 개봉 오름차순</label>
+                    </div>
+                <div class="movie-list"></div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2>About</h2>
+                <div class="about-content">
+                    여기는 인프밍 영화 정보 사이트입니다! 여기는 인프밍 영화 정보 사이트입니다! 여기는 인프밍 영화 정보 사이트입니다! 여기는 인프밍 영화 정보 사이트입니다! 여기는 인프밍 영화 정보 사이트입니다! 여기는 인프밍 영화 정보 사이트입니다! 여기는 인프밍 영화 정보 사이트입니다!
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const movieList = document.querySelector(".movie-list");
+            const searchInput = document.getElementById("searchInput");
+            let allMovies = [];
+            let movies = [];
+            let displayedCount = 0;
+            const moviesPerLoad = 6;
+
+            async function loadMovies() {
+                const res = await fetch("product.json");
+                allMovies = await res.json();
+                movies = [...allMovies];
+                displayMoreMovies();
+            }
+
+            function displayMoreMovies() {
+                const fragment = document.createDocumentFragment();
+                const nextMovies = movies.slice(displayedCount, displayedCount + moviesPerLoad);
+                nextMovies.forEach(movie => {
+                    const card = document.createElement("div");
+                    card.className = "movie-card";
+                    card.innerHTML = `
+                        <img src="${movie.poster}" alt="${movie.title}" class="movie-img" />
+                        <div class="movie-overview">${movie.overview}</div>
+                        <div class="movie-title">${movie.title}</div>
+                        <div>📅 ${movie.release_date}</div>
+                        <div>⭐ ${movie.rating}</div>
+                        <div>🎬 ${movie.genre.join(', ')}</div>
+                    `;
+                    fragment.appendChild(card);
+                });
+                movieList.appendChild(fragment);
+                displayedCount += moviesPerLoad;
+            }
+
+            function filterMovies() {
+                const keyword = searchInput.value.toLowerCase();
+                const sort = document.querySelector('input[name="sort"]:checked')?.value;
+                let filtered = allMovies.filter(m =>
+                    m.title.toLowerCase().includes(keyword) ||
+                    m.genre.some(g => g.toLowerCase().includes(keyword))
+                );
+
+                if (sort === "rating-desc") {
+                    filtered.sort((a, b) => b.rating - a.rating);
+                } else if (sort === "rating-asc") {
+                    filtered.sort((a, b) => a.rating - b.rating);
+                } else if (sort === "date-desc") {
+                    filtered.sort((a, b) => new Date(b.release_date.replace(/\./g, '-')) - new Date(a.release_date.replace(/\./g, '-')));
+                } else if (sort === "date-asc") {
+                    filtered.sort((a, b) => new Date(a.release_date.replace(/\./g, '-')) - new Date(b.release_date.replace(/\./g, '-')));
+                }
+
+                movies = filtered;
+                movieList.innerHTML = "";
+                displayedCount = 0;
+                displayMoreMovies();
+            }
+
+            window.addEventListener("scroll", () => {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                    displayMoreMovies();
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+                loadMovies();
+
+                // 정렬 기준 클릭 시 자동 필터 실행
+                document.querySelectorAll('input[name="sort"]').forEach(radio => {
+                    radio.addEventListener("change", filterMovies);
+                });
+                searchInput.addEventListener("keyup", function (event) {
+                    if (event.key === "Enter") {
+                        filterMovies();
+                    }
+                });
+            });
+            document.addEventListener("DOMContentLoaded", () => {
+                loadMovies();
+
+                // 정렬 클릭 시 필터 적용
+                document.querySelectorAll('input[name="sort"]').forEach(radio => {
+                    radio.addEventListener("change", filterMovies);
+                });
+
+                // 엔터로 검색 실행
+                searchInput.addEventListener("keyup", function (event) {
+                    if (event.key === "Enter") {
+                        filterMovies();
+                    }
+                });
+
+                // 헤더 클릭 시 초기화
+                document.getElementById("siteTitle").addEventListener("click", () => {
+                    searchInput.value = "";
+                    document.querySelectorAll('input[name="sort"]').forEach(r => r.checked = false);
+                    movies = [...allMovies];
+                    displayedCount = 0;
+                    movieList.innerHTML = "";
+                    displayMoreMovies();
+                });
+            });
+        </script>
+    </body>
+</html>

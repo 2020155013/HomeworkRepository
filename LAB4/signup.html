@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Signup page </title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body>
+        <h1>Welcome to Heeyong's movie site! </h1>
+        <p><a href = "login.html">LOGIN</a></p>
+        <div class="container">
+            <form method = "post" autocomplete = "on" action = "http://www.example.com">
+                <p>
+                    <label>Name: <input name = "name" type = "text" autofocus/> </label>
+                </p>
+                <p>
+                    <label>Birth Date: <input name = "date" type = "date"/></label> (yyyy-mm-dd)
+                </p>
+                <p> <!-- ratio 사용 -->
+                    <label> Gender:</label>
+                    <label for = "male">Male</label>
+                    <input type = "radio" id = "male" name = "gender" value = "male">
+                    <label for = "female">Female</label>
+                    <input type = "radio" id = "female" name = "gender" value = "female">
+                </p>
+                <p> <!-- select(dropdown) 사용 -->
+                    <label>Major:
+                        <select name = "rating"> 
+                            <option selected>computer science</option>
+                            <option>artificial intelligence</option>
+                            <option>integrated design</option>
+                            <option>mechanical engineering</option>
+                            <option>electrical engineering</option>
+                            <option>economics</option>
+                            <option>etc</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>Grade: <input name = "number" type = "number" min = "1" max = "6" step = "1" value = "3" /></label>
+                </p>
+                <p>
+                    <label>ID: <input name = "id" type = "text"/> </label>
+                </p>
+                <p>
+                    <label>Password: <input name = "pw" type = "password"/> </label>
+                </p>
+                <p>
+                    <label>Tel: <input name = "tel" type = "tel" placeholder = "###-####-####" pattern = "\d{3}-\d{4}-\d{4}" required></label>
+                </p>
+                <p>
+                    <label>Email: <input name = "email" type = "email" placeholder = "id@yonsei.ac.kr" /> </label>
+                </p>
+                <p>
+                    <label for = "range">Age:</label>
+                    20 <input id = "range" name = "range" type = "range" min = "20" max = "30" value = "24"/> 30
+                </p>
+                <p>
+                    <label>Blog URL: <input name = "url" type = "url" placeholder = "https://www.myblog.com"></label>
+                </p>
+                <p>
+                    <label>Portfolio: <input name = "portfolio" type = "file"></label>
+                </p>
+                <p>
+                    <input type = "submit" value = "Signup" class="btn-signup"/>
+                    <input type = "button" value = "Cancel" class="btn-cancel"/>
+                </p>
+
+            </form>
+        </div>
+    </body>
+</html>

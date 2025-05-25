@@ -1,0 +1,170 @@
+[
+    {
+        "title": "Titanic",
+        "overview": "84 years later, a 101-year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class passengers and her mother, Ruth DeWitt Bukater, and her fiancé, Caledon Hockley. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 at 2:20 in the morning.",
+        "rating": 7.5,
+        "release_date": "1997-11-18",
+        "genre": ["drama", "romance", "thriller"],
+        "poster": "titanic.jpg"
+    },
+    {
+        "title": "About Time",
+        "overview": "The night after another unsatisfactory New Year party, Tim's father tells his son that the men in his family have always had the ability to travel through time. Tim can't change history, but he can change what happens and has happened in his own life – so he decides to make his world a better place... by getting a girlfriend. Sadly, that turns out not to be as easy as he thinks.",
+        "rating": 7.8,
+        "release_date": "2013-08-16",
+        "genre": ["comedy", "drama", "science fiction"],
+        "poster": "about_time.jpg"
+    },
+    {
+        "title": "While You Were Sleeping",
+        "overview": "A love story built on a misunderstanding. A transit worker pulls commuter Peter off the tracks after he's mugged. But while he's in a coma, his family mistakenly thinks she's Peter's fiancée, and she doesn't correct them. Things get more complicated when she falls for his brother, who's not quite sure that she's who she claims to be.",
+        "rating": 6.5,
+        "release_date": "1995-04-21",
+        "genre": ["comedy", "drama", "romance"],
+        "poster": "wyws.jpg"
+    },
+    {
+        "title": "Die Hard",
+        "overview": "NYPD cop, John McClane's plan to reconcile with his estranged wife is thrown for a serious loop when minutes after he arrives at her office, the entire building is overtaken by a group of terrorists. With little help from the LAPD, wisecracking McClane sets out to single-handedly rescue the hostages and bring the bad guys down.",
+        "rating": 7.5,
+        "release_date": "1988-07-15",
+        "genre": ["action", "thriller"],
+        "poster": "die_hard.jpg"
+    },
+    {
+        "title": "The Fugitive",
+        "overview": "Wrongfully accused of murdering his wife, Richard Kimble escapes from the law in an attempt to find her killer and clear his name. Pursuing him is a team of U.S. marshals led by Deputy Samuel Gerard, a determined detective who will not rest until Richard is captured. As Richard leads the team through a series of intricate chases, he discovers the secrets behind his wife's death and struggles to expose the killer before it is too late.",
+        "rating": 7.2,
+        "release_date": "1993-08-06",
+        "genre": ["adventure", "action", "thriller", "crime", "mystery"],
+        "poster": "the_fugitive.jpg"
+    },
+    {
+        "title": "Air Force One",
+        "overview": "Russian terrorists conspire to hijack the aircraft with the president and his family on board. The commander in chief finds himself facing an impossible predicament: give in to the terrorists and sacrifice his family, or risk everything to uphold his principles - and the integrity of the nation.",
+        "rating": 6.2,
+        "release_date": "1997-07-25",
+        "genre": ["action", "thriller"],
+        "poster": "air_force_one.jpg"
+    },
+    {
+        "title": "The Notebook",
+        "overview": "An epic love story centered around an older man who reads aloud to a woman with Alzheimer's. From a faded notebook, the old man's words bring to life the story about a couple who is separated by World War II, and is then passionately reunited, seven years later, after they have taken different paths.",
+        "rating": 7.7,
+        "release_date": "2004-06-25",
+        "genre": ["romance", "drama"],
+        "poster": "the_notebook.jpg"
+    },
+    {
+        "title": "Serendipity",
+        "overview": "Although strangers Sara and Jonathan are both already in relationships, they realize they have genuine chemistry after a chance encounter – but part company soon after. Years later, they each yearn to reunite, despite being destined for the altar. But to give true love a chance, they have to find one another again.",
+        "rating": 6.6,
+        "release_date": "2001-10-05",
+        "genre": ["comedy", "romance"],
+        "poster": "serendipity.jpg"
+    },
+    {
+        "title": "Hannah Montana: The Movie",
+        "overview": "When Miley Stewart (aka pop-star Hannah Montana) gets too caught up in the superstar celebrity lifestyle, her dad decides it's time for a total change of scenery. But sweet nibblets! Miley must trade in all the glitz and glamour of Hollywood for some ol' blue jeans on the family farm in Tennessee, and question if she can be both Miley Stewart and Hannah Montana. With a little help from her friends – and awesome guest stars Taylor Swift, Rascal Flatts and Vanessa Williams – will she figure out whether to choose Hannah or Miley?",
+        "rating": 6.0,
+        "release_date": "2009-04-10",
+        "genre": ["comedy", "drama", "family", "music", "romance"],
+        "poster": "hmtm.jpg"
+    },
+    {
+        "title": "Camp Rock",
+        "overview": "When Mitchie gets a chance to attend Camp Rock, her life takes an unpredictable twist, and she learns just how important it is to be true to yourself.",
+        "rating": 6.0,
+        "release_date": "2008-06-20",
+        "genre": ["comedy", "drama", "family", "music", "TV movie"],
+        "poster": "camp_rock.jpg"
+    },
+    {
+        "title": "High School Musical",
+        "overview": "Troy (Zac Efron), the popular captain of the basketball team, and Gabriella (Vanessa Anne Hudgens), the brainy and beautiful member of the academic club, break all the rules of East High society when they secretly audition for the leads in the school's musical. As they reach for the stars and follow their dreams, everyone learns about acceptance, teamwork, and being yourself. And it's all set to fun tunes and very cool dance moves!",
+        "rating": 6.1,
+        "release_date": "2006-01-20",
+        "genre": ["comedy", "drama", "family", "music", "TV movie"],
+        "poster": "hsm1.jpg"
+    },
+    {
+        "title": "High School Musical 2",
+        "overview": "The East High Wildcats are ready to have the time of their lives. Troy (Zac Efron) is thrilled when he’s offered a job in a country club, but it’s all part of Sharpay’s (Ashley Tisdale) plot to lure him away from Gabriella (Vanessa Hudgens). How will it all turn out? All questions are answered on the night of the club’s Talent Show.",
+        "rating": 6.1,
+        "release_date": "2007-08-17",
+        "genre": ["comedy", "drama", "family", "music"],
+        "poster": "hsm2.jpg"
+    },
+    {
+        "title": "High School Musical 3: Senior Year",
+        "overview": "It's almost graduation day for high school seniors Troy, Gabriella, Sharpay, Chad, Ryan and Taylor ― and the thought of heading off in separate directions after leaving East High has these Wildcats thinking they need to do something they'll remember forever. Together with the rest of the Wildcats, they stage a spring musical reflecting their hopes and fears about the future and their unforgettable experiences growing up together. But with graduation approaching and college plans in question, what will become of the dreams, romances, and friendships of East High's senior Wildcats?",
+        "rating": 6.1,
+        "release_date": "2008-10-22",
+        "genre": ["comedy", "drama", "family", "music", "romance"],
+        "poster": "hsm3.jpg"
+    },
+    {
+        "title": "Enchanted",
+        "overview": "The beautiful princess Giselle is banished by an evil queen from her magical, musical animated land and finds herself in the gritty reality of the streets of modern-day Manhattan. Shocked by this strange new environment that doesn't operate on a \"happily ever after\" basis, Giselle is now adrift in a chaotic world badly in need of enchantment. But when Giselle begins to fall in love with a charmingly flawed divorce lawyer who has come to her aid - even though she is already promised to a perfect fairy tale prince back home - she has to wonder: Can a storybook view of romance survive in the real world?",
+        "rating": 6.6,
+        "release_date": "2007-11-20",
+        "genre": ["comedy", "family", "fantasy", "romance"],
+        "poster": "enchanted.jpg"
+    },
+    {
+        "title": "Conspiracy Theory",
+        "overview": "A man obsessed with conspiracy theories becomes a target after one of his theories turns out to be true. Unfortunately, in order to save himself, he has to figure out which theory it is.",
+        "rating": 6.5,
+        "release_date": "1997-08-07",
+        "genre": ["action", "drama", "mystery", "thriller"],
+        "poster": "conspiracy_theory.jpg"
+    },
+    {
+        "title": "17 Again",
+        "overview": "On the brink of a midlife crisis, 30-something Mike O'Donnell wishes he could have a \"do-over.\" And that's exactly what he gets when he wakes up one morning to find he's 17 years old again. With his adult mind stuck inside the body of a teenager, Mike actually has the chance to reverse some decisions he wishes he'd never made. But maybe they weren't so bad after all.",
+        "rating": 6.1,
+        "release_date": "2009-03-11",
+        "genre": ["comedy"],
+        "poster": "17_again.jpg"
+    },
+    {
+        "title": "Catch Me If You Can",
+        "overview": "A true story about Frank Abagnale Jr. who, before his 19th birthday, successfully conned millions of dollars worth of checks as a Pan Am pilot, doctor, and legal prosecutor. An FBI agent makes it his mission to put him behind bars. But Frank not only eludes capture, he revels in the pursuit.",
+        "rating": 7.7,
+        "release_date": "2002-12-25",
+        "genre": ["drama", "crime"],
+        "poster": "cmiyc.jpg"
+    },
+    {
+        "title": "Independence Day",
+        "overview": "On July 2, a giant alien mothership enters orbit around Earth and deploys several dozen saucer-shaped 'destroyer' spacecraft that quickly lay waste to major cities around the planet. On July 3, the United States conducts a coordinated counterattack that fails. On July 4, a plan is devised to gain access to the interior of the alien mothership in space, in order to plant a nuclear missile.",
+        "rating": 6.7,
+        "release_date": "1996-06-25",
+        "genre": ["action", "adventure", "science fiction"],
+        "poster": "independence_day.jpg"
+    },
+    {
+        "title": "The Sixth Sense",
+        "overview": "A psychological thriller about an eight year old boy named Cole Sear who believes he can see into the world of the dead. A child psychologist named Malcolm Crowe comes to Cole to help him deal with his problem, learning that he really can see ghosts of dead people.",
+        "rating": 7.7,
+        "release_date": "1999-08-06",
+        "genre": ["mystery", "thriller", "drama"],
+        "poster": "the_sixth_sense.jpg"
+    },
+    {
+        "title": "The Dark Knight Rises",
+        "overview": "Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Department. Eight years later, Batman encounters the mysterious Selina Kyle and the villainous Bane, a new terrorist leader who overwhelms Gotham's finest. The Dark Knight resurfaces to protect a city that has branded him an enemy.",
+        "rating": 7.6,
+        "release_date": "2012-07-16",
+        "genre": ["action", "crime", "drama", "thriller"],
+        "poster": "tdkr.jpg"
+    },
+    {
+        "title": "Inception",
+        "overview": "Cobb, a skilled thief who commits corporate es pionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+        "rating": 8.1,
+        "release_date": "2010-07-14",
+        "genre": ["action", "thriller", "science fiction", "mystery", "adventure"],
+        "poster": "inception.jpg"
+    }
+]
