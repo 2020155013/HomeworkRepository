@@ -30,12 +30,12 @@
                     <div class="sort-options">
                         <strong>정렬 기준</strong><br />
                         <br />
-                        <label><input type="radio" name="sort" value="rating-desc"> 평점 내림차순</label><br />
-                        <label><input type="radio" name="sort" value="rating-asc"> 평점 오름차순</label><br />
-                        <label><input type="radio" name="sort" value="date-desc"> 개봉 내림차순</label><br />
-                        <label><input type="radio" name="sort" value="date-asc"> 개봉 오름차순</label>
+                        <label><input type="radio" name="sort" value="rating-down"> 평점 내림차순</label><br />
+                        <label><input type="radio" name="sort" value="rating-up"> 평점 오름차순</label><br />
+                        <label><input type="radio" name="sort" value="date-down"> 개봉 내림차순</label><br />
+                        <label><input type="radio" name="sort" value="date-up"> 개봉 오름차순</label>
                     </div>
-                <div class="movie-list"></div>
+                    <div class="movie-list"></div>
                 </div>
             </section>
 
@@ -54,11 +54,12 @@
             let movies = [];
             let displayedCount = 0;
             const moviesPerLoad = 6;
-
-            async function loadMovies() {
+            
+            // fetch API -> product.json
+            async function loadMovies() { 
                 const res = await fetch("product.json");
-                allMovies = await res.json();
-                movies = [...allMovies];
+                allMovies = await res.json(); // response를 json으로 parsing
+                movies = [...allMovies]; // allMovies 복사 (훼손X)
                 displayMoreMovies();
             }
 
@@ -85,18 +86,18 @@
             function filterMovies() {
                 const keyword = searchInput.value.toLowerCase();
                 const sort = document.querySelector('input[name="sort"]:checked')?.value;
-                let filtered = allMovies.filter(m =>
-                    m.title.toLowerCase().includes(keyword) ||
-                    m.genre.some(g => g.toLowerCase().includes(keyword))
+                let filtered = [...allMovies].filter(text =>
+                    text.title.toLowerCase().includes(keyword) ||
+                    text.genre.some(text_genre => text_genre.toLowerCase().includes(keyword))
                 );
 
-                if (sort === "rating-desc") {
+                if (sort === "rating-down") {
                     filtered.sort((a, b) => b.rating - a.rating);
-                } else if (sort === "rating-asc") {
+                } else if (sort === "rating-up") {
                     filtered.sort((a, b) => a.rating - b.rating);
-                } else if (sort === "date-desc") {
+                } else if (sort === "date-down") {
                     filtered.sort((a, b) => new Date(b.release_date.replace(/\./g, '-')) - new Date(a.release_date.replace(/\./g, '-')));
-                } else if (sort === "date-asc") {
+                } else if (sort === "date-up") {
                     filtered.sort((a, b) => new Date(a.release_date.replace(/\./g, '-')) - new Date(b.release_date.replace(/\./g, '-')));
                 }
 
@@ -115,20 +116,7 @@
             document.addEventListener("DOMContentLoaded", () => {
                 loadMovies();
 
-                // 정렬 기준 클릭 시 자동 필터 실행
-                document.querySelectorAll('input[name="sort"]').forEach(radio => {
-                    radio.addEventListener("change", filterMovies);
-                });
-                searchInput.addEventListener("keyup", function (event) {
-                    if (event.key === "Enter") {
-                        filterMovies();
-                    }
-                });
-            });
-            document.addEventListener("DOMContentLoaded", () => {
-                loadMovies();
-
-                // 정렬 클릭 시 필터 적용
+                // 정렬 라디오 클릭 시 필터 실행
                 document.querySelectorAll('input[name="sort"]').forEach(radio => {
                     radio.addEventListener("change", filterMovies);
                 });
